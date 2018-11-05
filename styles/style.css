@@ -7,3 +7,23 @@ header .logo-img {
 	height: 65px;
 	margin: 20px 0;
 }
+
+#pageMenu {
+	border-bottom: 1px solid #ccc;
+}
+
+#pageMenu .nav-link {
+	padding: 0.5rem 0;
+	margin: 0 2rem -1px 0;
+	color: black;
+	text-transform: uppercase;
+}
+
+#pageMenu .nav-link:hover {
+	border-bottom: 2px solid #F4762B;
+}
+
+#pageMenu .nav-link.active {
+	color: #F4762B;
+	border-bottom: 2px solid #F4762B;
+}
