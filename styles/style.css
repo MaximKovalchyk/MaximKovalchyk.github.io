@@ -1,0 +1,9 @@
+header {
+	height: 100px;
+	background: #fff;
+}
+
+header .logo-img {
+	height: 65px;
+	margin: 20px 0;
+}
