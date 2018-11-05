@@ -10,6 +10,7 @@ header .logo-img {
 
 #pageMenu {
 	border-bottom: 1px solid #ccc;
+	background: #fff;
 }
 
 #pageMenu .nav-link {
@@ -27,3 +28,32 @@ header .logo-img {
 	color: #F4762B;
 	border-bottom: 2px solid #F4762B;
 }
+
+html,
+body,
+.wrapper {
+  height: 100%;
+  background: #eee;
+}
+.content {
+  box-sizing: border-box;
+  min-height: 100%;
+  padding-bottom: 80px;
+}
+footer {
+  height: 80px;
+  margin-top: -80px;
+  background: darkgray;
+  padding: 20px;
+}
+
+footer .sub-logo {
+	width: 150px;
+	text-align: center;
+	border-top: 1px solid #fff;
+	color: #fff;
+	margin: auto;
+	padding-top: 1em;
+}
+
+
