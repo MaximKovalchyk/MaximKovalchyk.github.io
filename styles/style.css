@@ -30,12 +30,11 @@ header .logo-img {
 }
 
 html,
-body,
-.wrapper {
+body {
   height: 100%;
   background: #eee;
 }
-.content {
+.wrapper {
   box-sizing: border-box;
   min-height: 100%;
   padding-bottom: 80px;
