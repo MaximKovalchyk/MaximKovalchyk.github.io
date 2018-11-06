@@ -68,3 +68,35 @@ footer .sub-logo {
 	margin-bottom: 2em;
 }
 
+.message-form {
+	max-width: 350px;
+	background: #fff;
+	padding: 30px 40px;
+	margin: 2em auto;
+}
+
+.message-form .required {
+	color: red;
+}
+
+.message-form .form-control {
+	border: none;
+	border-bottom: 3px solid #ced4da;
+	border-radius: 0;
+	padding-left: 0; 
+}
+.message-form .form-control:focus {
+	box-shadow: none;
+	border-bottom: 3px solid #F4762B;
+}
+
+.message-form .form-group {
+	position: relative;
+}
+
+.message-form .form-group label {
+	position: absolute;
+	bottom: 0;
+	cursor: text;
+}
+

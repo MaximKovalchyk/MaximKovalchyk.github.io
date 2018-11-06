@@ -63,7 +63,32 @@
 			  	</div>
 			  </div>
 			  <div class="tab-pane fade" id="skicams" role="tabpanel" aria-labelledby="profile-tab">Skicams</div>
-			  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Contact</div>
+			  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+			  	<form class="message-form" novalidate>
+			  	  <div class="form-group">
+					 <label for="exampleFormControlInput1">Name<span class="required">*</span></label>
+					 <input type="text" class="form-control" name="name" required>
+					 <div class="invalid-tooltip">
+					  Please provide a user name.
+					 </div>
+				  </div>
+				  <div class="form-group">
+					 <label for="exampleFormControlInput1">Email<span class="required">*</span></label>
+					 <input type="email" class="form-control" name="email" required>
+					 <div class="invalid-tooltip">
+					  Please provide a valid email.
+					 </div>
+				  </div>
+				  <div class="form-group">
+					 <label for="exampleFormControlTextarea1">Message</label>
+					 <textarea class="form-control" rows="3" name="message"></textarea>
+				  </div>
+				  <div class="form-group text-right">
+				  	<button type="submit" class="btn btn-primary">Submit</button>
+				  </div>
+				  
+				</form>
+			  </div>
 			</div>
 		</div>
 		<footer>
