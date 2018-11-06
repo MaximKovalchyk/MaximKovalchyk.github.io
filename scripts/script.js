@@ -43,70 +43,106 @@
 
 (function() {
 	'use strict';
-	var pointsList = {
-		names: ['Andalo', 'Monte Bondone', 'Alpe Devero', 'Valle Aurina'],
-		_list: {}};
 	
-	function getNameHTML(name) {
-		return '<h3>'+ name +'</h3>';
-	}
-	
-	function getDateHTML() {
-		var dateStr = (new Date()).toLocaleDateString("en-GB").replace(/\//g,'-');
-		return '<p class="card-date">' + dateStr + '</p>'
-	}
-	
-	function getImgListHTML(cams) {
-		var index, cam, resHTML = '';
-		
-		for (index in cams) {
-			if ( cams.hasOwnProperty( index ) ) {
-				cam = cams[index];
-				resHTML += '<img class="card-img-bottom" alt="'+ cam.name +'" src="'+ cam.url +'">';
-			}
-		}
-		
-		return resHTML;		
-	}
-	
-	function putImages(data) {
-		var index, pointName;
-		for (index in data) {
-			pointName = data[index].name;
-			if ( data.hasOwnProperty(index) && pointsList.names.indexOf(pointName) >= 0) {
-				pointsList._list[pointName] = data[index];
-			} 
-		}
-		console.log(data);
-		console.log(pointsList);
-		var ht = pointsList.names.reduce(function(html, pointName, index) {
-			var point = pointsList._list[pointName];
-			if (index % 2 == 0) {
-				//start row
-				html += '<div class="row">';
-			}
-			html += '<div class="col-md-6">\
+	var jsonNodeToHTML = {
+		convert: function (node) {
+			return node? '<div class="col-md-6">\
 			  				<div class="card shadow-sm">\
 								<div class="card-body">' + 
-									getDateHTML() + 
-									getNameHTML(point.name) + 
+									this.getDateHTML() + 
+									this.getNameHTML(node.name) + 
 								'</div>' +
-								getImgListHTML(point.cams) +
+								this.getImgListHTML(node.cams) +
 							'</div>\
-						</div>';
+						</div>' : '';
+		},
+		
+		getNameHTML: function (name) {
+			return '<h3>'+ name +'</h3>';
+		},
+		
+		regExp: /\//g,
+		
+		getDateHTML: function () {
+			var dateStr = (new Date()).toLocaleDateString("en-GB").replace(this.regExp,'-');
+			return '<p class="card-date">' + dateStr + '</p>';
+		},
+	
+		getImgListHTML: function (cams) {
+			var index, cam, resHTML = '';
+		
+			if(cams) {
+				for (index in cams) {
+					if ( cams.hasOwnProperty( index ) ) {
+						cam = cams[index];
+						resHTML += '<img class="card-img-bottom" alt="'+ cam.name +'" src="'+ cam.url +'">';
+					}
+				}
+			}
+		
+			return resHTML;		
+		},
+		
+	};
+	
+	var camsJsonToHTML = {
+		_names: [],
+		_json: [],
+		_list: {},
+		
+		init: function (camNames, json) {
+			this._names = camNames;
+			this._json = json;
+			
+			this._selectFromJsonByNames(json);
+		},
+		
+		_selectFromJsonByNames: function(data) {
+			var index, pointName;
+			
+			for (index in data) {
+				pointName = data[index].name;
+				
+				if ( data.hasOwnProperty(index) && this._names.indexOf(pointName) >= 0) {
+					this._list[pointName] = data[index];
+				} 
+			}
+		},
+		
+		convert: function() {
+			var html, pointsList = this._list, rowIsOpen = false;
+			
+			html = this._names.reduce(function(html, pointName, index) {
+				if (index % 2 == 0) {
+					rowIsOpen = true;
+					html += '<div class="row">';
+				}
+				
+				html += jsonNodeToHTML.convert(pointsList[pointName]);
 								
-			if (index % 2 != 0) {
-				//end row
+				if (index % 2 != 0) {
+					rowIsOpen = false;
+					html += '</div>';
+				}
+				return html;
+			}, '');
+			
+			if(rowIsOpen) {
 				html += '</div>';
 			}
+			
 			return html;
-		}, '');
-		$('#skicams .container').html(ht);
-		console.log(ht);
+		}
+	};
+	
+	function putImages(data) {
+		camsJsonToHTML.init(['Andalo', 'Monte Bondone', 'Alpe Devero', 'Valle Aurina'], data);
+		var html = camsJsonToHTML.convert();
 		
-	}	
+		$('#skicams .container').html(html);
+	}
+		
 	$(function() {
-		console.log('req');
 		$.ajaxSetup({
 		  headers : {   
 			 'X-Mashape-Key' : 'kxSXmUymofmshFHhhKxWOSJpqJsJp1I3zNnjsnqKwhITAiC1zw', 
