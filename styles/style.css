@@ -56,3 +56,15 @@ footer .sub-logo {
 }
 
 
+#about .card-img-top {
+	height: 225px; width: 100%; display: block;
+}
+
+#about .container {
+	margin-top: 2em;
+}
+
+#about .card {
+	margin-bottom: 2em;
+}
+
