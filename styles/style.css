@@ -4,8 +4,8 @@ header {
 }
 
 header .logo-img {
-	height: 65px;
-	margin: 20px 0 20px -20px;
+	height: 90px;
+	margin: 5px 0 0 -28px;
 }
 
 .navbar-toggler {
@@ -15,15 +15,16 @@ header .logo-img {
 }
 
 #pageMenu {
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #F1F1F1;
 	background: #fff;
 }
 
 #pageMenu .nav-link {
 	padding: 0.5rem 0;
-	margin: 0 2rem -1px 0;
+	margin: 0 3.2rem -1px 0;
 	color: black;
 	text-transform: uppercase;
+	font-size: 1.2rem;
 }
 
 #pageMenu .nav-link:hover {
@@ -69,8 +70,9 @@ a:hover {
 html,
 body {
   height: 100%;
-  background: #eee;
+  background: #F8F8F8;
   min-width: 320px;
+  font-family: 'Roboto', sans-serif;
 }
 .wrapper {
   box-sizing: border-box;
@@ -80,22 +82,29 @@ body {
 footer {
   height: 80px;
   margin-top: -80px;
-  background: darkgray;
+  background: #282828;
   padding: 20px;
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(126,146,163,1);
+	-moz-box-shadow: 0px 0px 3px 1px rgba(126,146,163,1);
+	box-shadow: 0px 0px 3px 1px rgba(126,146,163,1);
 }
 
 footer .sub-logo {
-	width: 150px;
+	width: 320px;
 	text-align: center;
-	border-top: 1px solid #fff;
-	color: #fff;
+	border-top: 2px solid #2E2E2E;
+	color: #555555;
 	margin: auto;
-	padding-top: 1em;
+	padding-top: 0.7em;
 }
 
 
 #about .card-img-top, #skicams .card-img-bottom {
 	height: 250px; width: 100%; display: block;
+}
+
+#about .card-body {
+	padding: 1.7rem 1.2rem;
 }
 
 @media only screen and (min-width: 576px) {
