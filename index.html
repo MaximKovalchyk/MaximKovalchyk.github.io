@@ -13,19 +13,28 @@
 	<body>
 		<div class="wrapper">
 			<header>
-				<img class="logo-img" src="images/logo.svg" />
+				<div class="container">
+					<img class="logo-img" src="images/logo.svg" />
+					<a class="navbar-toggler" type="button" data-toggle="collapse" data-target="#pageMenu">
+						<img src="images/menu.svg" alt="toggle menu" style="height: 20px;">
+					</a>
+				</div>
 			</header>
-			<ul class="nav" id="pageMenu" role="tablist">
-			  <li class="nav-item">
-				<a class="nav-link active" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="true">About Us</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" id="skicams-tab" data-toggle="tab" href="#skicams" role="tab" aria-controls="skicams" aria-selected="false">Skicams</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
-			  </li>
-			</ul>
+			<div id="pageMenu" class="collapse">
+				<div class="container">
+					<ul class="nav" role="tablist">
+					  <li class="nav-item">
+						<a class="nav-link active" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="true">About Us</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" id="skicams-tab" data-toggle="tab" href="#skicams" role="tab" aria-controls="skicams" aria-selected="false">Skicams</a>
+					  </li>
+					  <li class="nav-item">
+						<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+					  </li>
+					</ul>
+				</div>
+			</div>
 			<div class="tab-content" id="pageContent">
 			  <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="home-tab">
 			  	<div class="container">

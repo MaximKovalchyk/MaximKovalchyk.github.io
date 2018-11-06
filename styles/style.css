@@ -5,7 +5,13 @@ header {
 
 header .logo-img {
 	height: 65px;
-	margin: 20px 0;
+	margin: 20px 0 20px -20px;
+}
+
+.navbar-toggler {
+	float: right;
+	margin: 30px 0;
+	display: none;
 }
 
 #pageMenu {
@@ -29,10 +35,42 @@ header .logo-img {
 	border-bottom: 2px solid #F4762B;
 }
 
+@media only screen and (max-width: 400px) {
+   .navbar-toggler {
+		display: block;
+	}
+	#pageMenu .nav-link, #pageMenu .nav-link.active, #pageMenu .nav-link:hover {
+		margin-bottom: 0;
+		border-bottom: 0;
+		display: block;
+	}
+	.nav-item {
+		display: block;
+		width: 100%;
+	}
+	#pageMenu .nav-link:hover {
+		color: #F4762B;
+	}
+}
+
+@media only screen and (min-width: 400px) {
+	#pageMenu.collapse {
+		display: block;
+	}	
+}
+
+
+a:focus,
+a:active,
+a:hover {
+    outline: 0;
+}
+
 html,
 body {
   height: 100%;
   background: #eee;
+  min-width: 320px;
 }
 .wrapper {
   box-sizing: border-box;
@@ -57,8 +95,33 @@ footer .sub-logo {
 
 
 #about .card-img-top, #skicams .card-img-bottom {
-	height: 225px; width: 100%; display: block;
+	height: 250px; width: 100%; display: block;
 }
+
+@media only screen and (min-width: 576px) {
+   #about .card-img-top, #skicams .card-img-bottom {
+		height: 300px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+   #about .card-img-top, #skicams .card-img-bottom {
+		height: 160px;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+   #about .card-img-top, #skicams .card-img-bottom {
+		height: 200px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+   #about .card-img-top, #skicams .card-img-bottom {
+		height: 225px;
+	}
+}
+
 #skicams .card-img-bottom {
 	height: 325px;
 	border-radius: 0;
@@ -87,6 +150,7 @@ footer .sub-logo {
 
 .message-form {
 	max-width: 350px;
+	width: 100%;
 	background: #fff;
 	padding: 30px 40px;
 	margin: 2em auto;
