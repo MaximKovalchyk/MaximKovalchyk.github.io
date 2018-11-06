@@ -56,16 +56,33 @@ footer .sub-logo {
 }
 
 
-#about .card-img-top {
+#about .card-img-top, #skicams .card-img-bottom {
 	height: 225px; width: 100%; display: block;
 }
+#skicams .card-img-bottom {
+	height: 325px;
+	border-radius: 0;
+}
+#skicams .card .card-img-bottom:last-of-type {
+	border-bottom-right-radius: calc(.25rem - 1px);
+	border-bottom-left-radius: calc(.25rem - 1px);
+} 
 
-#about .container {
+#about .container, #skicams .container {
 	margin-top: 2em;
 }
 
-#about .card {
+#about .card, #skicams .card {
 	margin-bottom: 2em;
+}
+
+#skicams .card .card-date {
+	text-align: right;
+	font-size: 0.9em;
+	margin-bottom: -1em;
+}
+#skicams .card h3 {
+	text-align: center;
 }
 
 .message-form {
