@@ -9,6 +9,9 @@
           event.stopPropagation();
         } 
         form.classList.add('was-validated');
+        //block data sending
+        event.preventDefault();
+        event.stopPropagation();
     });
     
   }, false);

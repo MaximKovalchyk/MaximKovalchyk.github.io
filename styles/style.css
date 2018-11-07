@@ -36,31 +36,6 @@ header .logo-img {
 	border-bottom: 2px solid #F4762B;
 }
 
-@media only screen and (max-width: 400px) {
-   .navbar-toggler {
-		display: block;
-	}
-	#pageMenu .nav-link, #pageMenu .nav-link.active, #pageMenu .nav-link:hover {
-		margin-bottom: 0;
-		border-bottom: 0;
-		display: block;
-	}
-	.nav-item {
-		display: block;
-		width: 100%;
-	}
-	#pageMenu .nav-link:hover {
-		color: #F4762B;
-	}
-}
-
-@media only screen and (min-width: 400px) {
-	#pageMenu.collapse {
-		display: block;
-	}	
-}
-
-
 a:focus,
 a:active,
 a:hover {
@@ -148,25 +123,32 @@ footer .sub-logo {
 	margin-bottom: 2em;
 }
 
+#skicams .card-body {
+	padding: 0.7rem; 
+}
+
 #skicams .card .card-date {
 	text-align: right;
 	font-size: 0.9em;
 	margin-bottom: -1em;
+	color: #cbcbcb;
 }
 #skicams .card h3 {
 	text-align: center;
 }
 
 .message-form {
-	max-width: 350px;
+	max-width: 450px;
 	width: 100%;
 	background: #fff;
-	padding: 30px 40px;
+	padding: 40px 40px 20px 40px;
 	margin: 2em auto;
 }
 
 .message-form .required {
 	color: red;
+	display: inline-block;
+	margin-left: 5px;
 }
 
 .message-form .form-control {
@@ -182,11 +164,84 @@ footer .sub-logo {
 
 .message-form .form-group {
 	position: relative;
+	margin-bottom: 1.7em;
 }
 
 .message-form .form-group label {
 	position: absolute;
 	bottom: 0;
 	cursor: text;
+	color: #ccc;
+}
+
+.message-form .send-btn {
+	padding: .375rem 1.5rem;
+	margin-top: 15px;
+}
+
+@media only screen and (max-width: 480px) {
+   .navbar-toggler {
+		display: block;
+	}
+	#pageMenu .nav-link, #pageMenu .nav-link.active, #pageMenu .nav-link:hover {
+		margin-bottom: 0;
+		border-bottom: 0;
+		display: block;
+	}
+	.nav-item {
+		display: block;
+		width: 100%;
+	}
+	#pageMenu .nav-link:hover {
+		color: #F4762B;
+	}
+	#skicams .card .card-date {
+		margin-bottom: 0;
+	}
+}
+
+@media only screen and (min-width: 480px) {
+	#pageMenu.collapse {
+		display: block;
+	}	
+	
+}
+
+@media only screen and (min-width: 480px) {
+	#pageContent {
+		min-height: 410px;
+	}
+
+	#contact {
+		position: absolute;
+		bottom: 80px;
+		left: 0;
+		right: 0;
+		top: 150px;
+		overflow: auto;
+		min-height: 400px;
+	}
+
+	.message-form {
+		position: relative;
+		top: 50%;
+		transform: perspective(1px) translateY(-50%);
+		margin: auto;
+		padding: 40px 100px 20px 100px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	footer .sub-logo {
+		width: 290px;
+	}
+	
+}
+
+.loader {
+	display: block;
+	margin: auto;
+	height: 200px;
+	width: 200px;
 }
 
