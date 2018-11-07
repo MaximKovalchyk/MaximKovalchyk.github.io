@@ -14,6 +14,66 @@ header .logo-img {
 	display: none;
 }
 
+
+/*remove border in ff*/
+a:focus,
+a:active,
+a:hover {
+    outline: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background: #F8F8F8;
+  min-width: 320px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.loader {
+	display: block;
+	margin: auto;
+	height: 200px;
+	width: 200px;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  min-height: 100%;
+  padding-bottom: 80px;
+}
+
+footer {
+  height: 80px;
+  margin-top: -80px;
+  background: #282828;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(126,146,163,1);
+	-moz-box-shadow: 0px 0px 3px 1px rgba(126,146,163,1);
+	box-shadow: 0px 0px 3px 1px rgba(126,146,163,1);
+}
+footer .sub-logo {
+	width: 320px;
+	text-align: center;
+	border-top: 2px solid #2E2E2E;
+	color: #555555;
+	margin: auto;
+	padding-top: 0.7em;
+}
+@media only screen and (max-width: 480px) {
+	footer .sub-logo {
+		width: 290px;
+	}	
+}
+
+#about .container, #skicams .container {
+	margin-top: 2em;
+}
+
+#about .card, #skicams .card {
+	margin-bottom: 2em;
+}
+
 #pageMenu {
 	border-bottom: 1px solid #F1F1F1;
 	background: #fff;
@@ -36,43 +96,33 @@ header .logo-img {
 	border-bottom: 2px solid #F4762B;
 }
 
-a:focus,
-a:active,
-a:hover {
-    outline: 0;
+@media only screen and (max-width: 480px) {
+   .navbar-toggler {
+		display: block;
+	}
+	#pageMenu .nav-link, #pageMenu .nav-link.active, #pageMenu .nav-link:hover {
+		margin-bottom: 0;
+		border-bottom: 0;
+		display: block;
+	}
+	.nav-item {
+		display: block;
+		width: 100%;
+	}
+	#pageMenu .nav-link:hover {
+		color: #F4762B;
+	}
+	#skicams .card .card-date {
+		margin-bottom: 0;
+	}
 }
 
-html,
-body {
-  height: 100%;
-  background: #F8F8F8;
-  min-width: 320px;
-  font-family: 'Roboto', sans-serif;
+@media only screen and (min-width: 480px) {
+	#pageMenu.collapse {
+		display: block;
+	}	
+	
 }
-.wrapper {
-  box-sizing: border-box;
-  min-height: 100%;
-  padding-bottom: 80px;
-}
-footer {
-  height: 80px;
-  margin-top: -80px;
-  background: #282828;
-  padding: 20px;
-  -webkit-box-shadow: 0px 0px 3px 1px rgba(126,146,163,1);
-	-moz-box-shadow: 0px 0px 3px 1px rgba(126,146,163,1);
-	box-shadow: 0px 0px 3px 1px rgba(126,146,163,1);
-}
-
-footer .sub-logo {
-	width: 320px;
-	text-align: center;
-	border-top: 2px solid #2E2E2E;
-	color: #555555;
-	margin: auto;
-	padding-top: 0.7em;
-}
-
 
 #about .card-img-top, #skicams .card-img-bottom {
 	height: 250px; width: 100%; display: block;
@@ -114,14 +164,6 @@ footer .sub-logo {
 	border-bottom-right-radius: calc(.25rem - 1px);
 	border-bottom-left-radius: calc(.25rem - 1px);
 } 
-
-#about .container, #skicams .container {
-	margin-top: 2em;
-}
-
-#about .card, #skicams .card {
-	margin-bottom: 2em;
-}
 
 #skicams .card-body {
 	padding: 0.7rem; 
@@ -179,33 +221,7 @@ footer .sub-logo {
 	margin-top: 15px;
 }
 
-@media only screen and (max-width: 480px) {
-   .navbar-toggler {
-		display: block;
-	}
-	#pageMenu .nav-link, #pageMenu .nav-link.active, #pageMenu .nav-link:hover {
-		margin-bottom: 0;
-		border-bottom: 0;
-		display: block;
-	}
-	.nav-item {
-		display: block;
-		width: 100%;
-	}
-	#pageMenu .nav-link:hover {
-		color: #F4762B;
-	}
-	#skicams .card .card-date {
-		margin-bottom: 0;
-	}
-}
 
-@media only screen and (min-width: 480px) {
-	#pageMenu.collapse {
-		display: block;
-	}	
-	
-}
 
 @media only screen and (min-width: 480px) {
 	#pageContent {
@@ -229,19 +245,5 @@ footer .sub-logo {
 		margin: auto;
 		padding: 40px 100px 20px 100px;
 	}
-}
-
-@media only screen and (max-width: 480px) {
-	footer .sub-logo {
-		width: 290px;
-	}
-	
-}
-
-.loader {
-	display: block;
-	margin: auto;
-	height: 200px;
-	width: 200px;
 }
 

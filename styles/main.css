@@ -1,0 +1,75 @@
+header {
+	height: 100px;
+	background: #fff;
+}
+
+header .logo-img {
+	height: 90px;
+	margin: 5px 0 0 -28px;
+}
+
+.navbar-toggler {
+	float: right;
+	margin: 30px 0;
+	display: none;
+}
+
+
+/*remove border in ff*/
+a:focus,
+a:active,
+a:hover {
+    outline: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background: #F8F8F8;
+  min-width: 320px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.loader {
+	display: block;
+	margin: auto;
+	height: 200px;
+	width: 200px;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  min-height: 100%;
+  padding-bottom: 80px;
+}
+
+footer {
+  height: 80px;
+  margin-top: -80px;
+  background: #282828;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(126,146,163,1);
+	-moz-box-shadow: 0px 0px 3px 1px rgba(126,146,163,1);
+	box-shadow: 0px 0px 3px 1px rgba(126,146,163,1);
+}
+footer .sub-logo {
+	width: 320px;
+	text-align: center;
+	border-top: 2px solid #2E2E2E;
+	color: #555555;
+	margin: auto;
+	padding-top: 0.7em;
+}
+@media only screen and (max-width: 480px) {
+	footer .sub-logo {
+		width: 290px;
+	}	
+}
+
+#about .container, #skicams .container {
+	margin-top: 2em;
+}
+
+#about .card, #skicams .card {
+	margin-bottom: 2em;
+}

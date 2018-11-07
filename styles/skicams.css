@@ -1,0 +1,22 @@
+#skicams .card-img-bottom {
+	height: 325px;
+	border-radius: 0;
+}
+#skicams .card .card-img-bottom:last-of-type {
+	border-bottom-right-radius: calc(.25rem - 1px);
+	border-bottom-left-radius: calc(.25rem - 1px);
+} 
+
+#skicams .card-body {
+	padding: 0.7rem; 
+}
+
+#skicams .card .card-date {
+	text-align: right;
+	font-size: 0.9em;
+	margin-bottom: -1em;
+	color: #cbcbcb;
+}
+#skicams .card h3 {
+	text-align: center;
+}

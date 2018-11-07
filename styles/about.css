@@ -1,0 +1,31 @@
+#about .card-img-top, #skicams .card-img-bottom {
+	height: 250px; width: 100%; display: block;
+}
+
+#about .card-body {
+	padding: 1.7rem 1.2rem;
+}
+
+@media only screen and (min-width: 576px) {
+   #about .card-img-top, #skicams .card-img-bottom {
+		height: 300px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+   #about .card-img-top, #skicams .card-img-bottom {
+		height: 160px;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+   #about .card-img-top, #skicams .card-img-bottom {
+		height: 200px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+   #about .card-img-top, #skicams .card-img-bottom {
+		height: 225px;
+	}
+}

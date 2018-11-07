@@ -1,0 +1,49 @@
+#pageMenu {
+	border-bottom: 1px solid #F1F1F1;
+	background: #fff;
+}
+
+#pageMenu .nav-link {
+	padding: 0.5rem 0;
+	margin: 0 3.2rem -1px 0;
+	color: black;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+}
+
+#pageMenu .nav-link:hover {
+	border-bottom: 2px solid #F4762B;
+}
+
+#pageMenu .nav-link.active {
+	color: #F4762B;
+	border-bottom: 2px solid #F4762B;
+}
+
+@media only screen and (max-width: 480px) {
+   .navbar-toggler {
+		display: block;
+	}
+	#pageMenu .nav-link, #pageMenu .nav-link.active, #pageMenu .nav-link:hover {
+		margin-bottom: 0;
+		border-bottom: 0;
+		display: block;
+	}
+	.nav-item {
+		display: block;
+		width: 100%;
+	}
+	#pageMenu .nav-link:hover {
+		color: #F4762B;
+	}
+	#skicams .card .card-date {
+		margin-bottom: 0;
+	}
+}
+
+@media only screen and (min-width: 480px) {
+	#pageMenu.collapse {
+		display: block;
+	}	
+	
+}

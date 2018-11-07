@@ -1,0 +1,68 @@
+.message-form {
+	max-width: 450px;
+	width: 100%;
+	background: #fff;
+	padding: 40px 40px 20px 40px;
+	margin: 2em auto;
+}
+
+.message-form .required {
+	color: red;
+	display: inline-block;
+	margin-left: 5px;
+}
+
+.message-form .form-control {
+	border: none;
+	border-bottom: 3px solid #ced4da;
+	border-radius: 0;
+	padding-left: 0; 
+}
+.message-form .form-control:focus {
+	box-shadow: none;
+	border-bottom: 3px solid #F4762B;
+}
+
+.message-form .form-group {
+	position: relative;
+	margin-bottom: 1.7em;
+}
+
+.message-form .form-group label {
+	position: absolute;
+	bottom: 0;
+	cursor: text;
+	color: #ccc;
+}
+
+.message-form .send-btn {
+	padding: .375rem 1.5rem;
+	margin-top: 15px;
+}
+
+
+
+@media only screen and (min-width: 480px) {
+	#pageContent {
+		min-height: 410px;
+	}
+
+	#contact {
+		position: absolute;
+		bottom: 80px;
+		left: 0;
+		right: 0;
+		top: 150px;
+		overflow: auto;
+		min-height: 400px;
+	}
+
+	.message-form {
+		position: relative;
+		top: 50%;
+		transform: perspective(1px) translateY(-50%);
+		margin: auto;
+		padding: 40px 100px 20px 100px;
+	}
+}
+
